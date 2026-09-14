@@ -7,7 +7,8 @@
 </head>
 <body>
     <?php
-    echo "<h1>OI</h1>"
+    $nome = "Peruzzo";
+    echo "<h1>Olá, $nome!</h1>"
     ?>
 </body>
 </html>
