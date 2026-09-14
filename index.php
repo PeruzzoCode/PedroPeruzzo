@@ -8,7 +8,7 @@
 <body>
     <?php
     $nome = "Peruzzo";
-    $idade = "17";
+    $idade = "37";
     $verificar = "";
     if ($idade >=18){
         $verificar = "Você é maior de idade";
