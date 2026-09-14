@@ -6,6 +6,8 @@
     <title>PedroPeruzzo</title>
 </head>
 <body>
+    <?php
     echo "<h1>OI</h1>"
+    ?>
 </body>
 </html>
