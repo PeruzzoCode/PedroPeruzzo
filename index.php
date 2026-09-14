@@ -10,7 +10,7 @@
     $nome = "Peruzzo";
     $idade = "17";
     ?>
-    <h1>nome: <?= $nome?> </h>
+    <h1>nome: <?= $nome?> </h1>
     <p>idade: <?= $idade?></p>
 </body>
 </html>
