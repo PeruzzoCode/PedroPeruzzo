@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>PedroPeruzzo</title>
 </head>
 <body>
@@ -18,9 +20,12 @@
     }
         
     ?>
+    
+    <div class="card">    
     <h1>nome: <?= $nome?> </h1>
     <p>idade: <?= $idade?></p>
     <p> <?= $verificar ?> </p>
-    
+    </div>
+
 </body>
 </html>
