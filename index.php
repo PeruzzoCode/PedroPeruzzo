@@ -13,6 +13,7 @@
 
         <input type="text" name="$nome" placeholder="Digite seu texto:">
         <input type="number" number="$idade" placeholder="Digite sua idade:">
+        <button type="button">Click Me</button>
 
     </form>
 
