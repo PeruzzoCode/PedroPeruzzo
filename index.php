@@ -1,3 +1,25 @@
+<form method="POST">
+
+        <input type="text" id="nome" name="nome">
+        <input type="number" id="idade" name="idade">
+
+        <?php
+        $nome="";
+        $idade=0;
+        $resultado="";
+
+        if ($_SERVER["REQUEST_METHOD"]=="POST"){
+            $nome = $POST["nome"];
+            $idade = $POST["idade"];
+
+            if ($idade >=18){
+                $resultado = "Você é maior de idade";
+            } 
+            else {
+                $resultado = "Você é menor de idade";
+            }
+        }
+    ?>
 
 <!DOCTYPE html>
 <html lang="PT-BR">
@@ -9,30 +31,20 @@
 </head>
 <body>
 
-    <form action="">
-
-        <input type="text" name="$nome" placeholder="Digite seu texto:">
-        <input type="number" number="$idade" placeholder="Digite sua idade:">
-        <button type="$idade">Click Me</button>
+    
 
     </form>
 
-    <?php
-    $verificar = "";
-    if ($idade >=18){
-        $verificar = "Você é maior de idade";
-    } 
-    else if ($idade >=0) {
-        $verificar = "Você é menor de idade";
-    }
-        
-    ?>
-    
-    <div class="card">    
-    <h1>nome: <?= $nome?> </h1>
-    <p>idade: <?= $idade?></p>
-    <p> <?= $verificar ?> </p>
+    <?php if($resultado != "") { ?>
+    <div class="card">  
+        <h1>nome: <?= $nome?> </h1>
+        <p>idade: <?= $idade?></p>
+        <p> <?= $resultado ?> </p>
     </div>
+        <?php  } ?>
+
+    
+        
 
 </body>
 </html>
