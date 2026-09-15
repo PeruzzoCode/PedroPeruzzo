@@ -21,7 +21,7 @@
     if ($idade >=18){
         $verificar = "Você é maior de idade";
     } 
-    elseif ($idade >=0) {
+    else if ($idade >=0) {
         $verificar = "Você é menor de idade";
     }
         
