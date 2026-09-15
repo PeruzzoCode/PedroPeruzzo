@@ -1,9 +1,4 @@
-<form method="POST">
-
-        <input type="text" id="nome" name="nome">
-        <input type="number" id="idade" name="idade">
-
-        <?php
+       <?php
         $nome="";
         $idade=0;
         $resultado="";
@@ -13,10 +8,10 @@
             $idade = $POST["idade"];
 
             if ($idade >=18){
-                $resultado = "Você é maior de idade";
+                $resultado = "maior";
             } 
             else {
-                $resultado = "Você é menor de idade";
+                $resultado = "menor";
             }
         }
     ?>
@@ -31,15 +26,20 @@
 </head>
 <body>
 
-    
+    <form method="POST">
+
+        <input type="text" id="nome" name="nome" required>
+        <input type="number" id="idade" name="idade" required>
+
+        <button type="submit">Enviar</button>
 
     </form>
 
     <?php if($resultado != "") { ?>
     <div class="card">  
-        <h1>nome: <?= $nome?> </h1>
-        <p>idade: <?= $idade?></p>
-        <p> <?= $resultado ?> </p>
+        
+        <h1><?= $nome ?> é <?= $resultado ?> de idade. Ele tem <?= $idade ?> anos.</h1>
+        
     </div>
         <?php  } ?>
 
