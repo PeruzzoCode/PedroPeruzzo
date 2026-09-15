@@ -4,7 +4,7 @@
         $resultado="";
 
         if ($_SERVER["REQUEST_METHOD"]=="POST"){
-            $nome = $POST["nome"];
+            $nome = $POST["name"];
             $idade = $POST["idade"];
 
             if ($idade >=18){
@@ -28,19 +28,17 @@
 
     <form method="POST">
 
-        <input type="text" id="nome" name="nome" required>
-        <input type="number" id="idade" name="idade" required>
+        <input type="text" id="name" name="name" placeholder="Digite seu nome">
+        <input type="number" id="idade" name="idade" placeholder="Digite sua idade">
 
         <button type="submit">Enviar</button>
 
     </form>
 
     <?php if($resultado != "") { ?>
-    <div class="card">  
+    
+        <h1>O <?= $nome ?> é <?= $resultado ?> de idade. Ele tem <?= $idade ?> anos.</h1>
         
-        <h1><?= $nome ?> é <?= $resultado ?> de idade. Ele tem <?= $idade ?> anos.</h1>
-        
-    </div>
         <?php  } ?>
 
     
