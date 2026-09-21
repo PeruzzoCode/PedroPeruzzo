@@ -25,13 +25,13 @@
                 $resultado = "Aprovado";
             } 
 
-            elseif ($media <=4.9) { 
-                $resultado = "Reprovado";
+            elseif ($media >=5 && $media<7) { 
+                $resultado = "de Recuperação";
 
             }
             
             else {
-                $resultado = "de Recuperação";
+                $resultado = "Reprovado";
             }
         }
     ?>
