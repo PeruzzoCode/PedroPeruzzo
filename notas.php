@@ -64,10 +64,10 @@
 
     <?php if($resultado != "") { ?>
     
-        <h1><?= $nome ?> </h1>
-        <p><?= $idade ?></p>
-        <p><?= $resultado?></p>
-        <p><?= $media?></p>
+        <h1>Relatório do aluno:<?= $nome ?></h1>
+        <h2>Idade:<?= $idade ?></h2>
+        <h2>Status:<?= $resultado?></h2>
+        <h2>Média final:<?= $media?></h2>
         
         <?php  } ?>
 
