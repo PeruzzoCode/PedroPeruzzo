@@ -64,7 +64,10 @@
 
     <?php if($resultado != "") { ?>
     
-        <h1>O <?= $nome ?> de <?= $idade ?> anos de idade, está <?= $resultado ?> .</h1>
+        <h1><?= $nome ?> </h1>
+        <p><?= $idade ?></p>
+        <p><?= $resultado?></p>
+        <p><?= $media?></p>
         
         <?php  } ?>
 
