@@ -19,7 +19,7 @@
             $nota4 = $_POST["nota4"];
             $nota5 = $_POST["nota5"];
             
-            $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3) /5 );
+            $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3) /10 );
 
             if ($media >=7){
                 $resultado = "Aprovado";
