@@ -17,6 +17,7 @@
             $nota4 = $_POST["nota4"];
             $nota5 = $_POST["nota5"];
             
+            $media = (($nota1 * 2) ($nota2 * 3) ($nota3 * 1) ($nota4 * 1) ($nota5 * 3) /10 );
 
             if ($media >=7){
                 $resultado = "Aprovado";
@@ -46,12 +47,12 @@
     <form method="POST">
 
         <input type="text" id="name" name="name" placeholder="Digite seu nome">
-        <input type="number" id="idade" name="idade" placeholder="Digite sua idade">
-        <input type="number" id="nota1" name="nota1" placeholder="Digite sua nota da 1° prova:">
-        <input type="number" id="nota2" name="nota2" placeholder="Digite sua nota da 2° prova:">
-        <input type="number" id="nota3" name="nota3" placeholder="Digite sua nota da 3° prova:">
-        <input type="number" id="nota4" name="nota4" placeholder="Digite sua nota da 4° prova:">
-        <input type="number" id="nota5" name="nota5" placeholder="Digite sua nota da 5° prova:">
+        <input type="number" id="idade" name="idade" placeholder="Digite sua idade"><br><br>
+        <input type="number" id="nota1" name="nota1" placeholder="Digite sua nota da 1° prova:"><br><br>
+        <input type="number" id="nota2" name="nota2" placeholder="Digite sua nota da 2° prova:"><br><br>
+        <input type="number" id="nota3" name="nota3" placeholder="Digite sua nota da 3° prova:"><br><br>
+        <input type="number" id="nota4" name="nota4" placeholder="Digite sua nota da 4° prova:"><br><br>
+        <input type="number" id="nota5" name="nota5" placeholder="Digite sua nota da 5° prova:"><br><br>
 
 
 
