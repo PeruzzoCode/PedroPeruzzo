@@ -8,5 +8,6 @@
 <body>
     <a href="idade.php">Verificador de idade</a><br><br>
     <a href="notas.php">Verificador de notas</a><br><br>
+    <a href="notas-desafio.php">Verificador de notas (desafio)</a><br><br>
 </body>
 </html>
