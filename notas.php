@@ -77,12 +77,14 @@
 
     </form>
 
+    <h1 style="color: red;"><?= $erro ?></h1>
+
     <?php if($resultado != "") { ?>
     
         <h1>Relatório do aluno: <?= $nome ?></h1>
         <h2>Idade: <?= $idade ?></h2>
         <h2>Status: <?= $resultado?></h2>
-        <h2>Faltam <?= $pontos?> pontos para atingir a média.</h2>
+        <h2>Falta <?= $pontos?> pontos para atingir a média.</h2>
         <h2>Média final: <?= $media?></h2>
         <h1><?= $erro?></h1>
         
