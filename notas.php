@@ -54,12 +54,14 @@
                 $pontos = 7 - $media;
             }
 
-            elseif ($media >=5 && $frequencia>=75){
+            elseif ($media >=5 && $frequencia<=75){
                 $resultado = "Reprovado por frequência.";
+                $corStatus = "red";
             }
 
             else {
                 $resultado = "Reprovado por nota e frequência";
+                $corStatus = "red";
             }
         }
     ?>
