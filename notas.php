@@ -34,7 +34,7 @@
                 $resultado = "Aprovado";
             } 
 
-            elseif ($media = 10){
+            elseif ($media == 10){
                 $resultado = "APROVADO COM EXELÊNCIA";
             }
 
