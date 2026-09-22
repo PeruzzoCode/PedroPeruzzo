@@ -11,7 +11,7 @@
         $erro="";
         $pontos=0;
         $corStatus = "black";
-        
+        $frequencia = "0";
 
         if ($_SERVER["REQUEST_METHOD"]=="POST"){
             $nome = $_POST["name"];
@@ -21,6 +21,7 @@
             $nota3 = (float) $_POST["nota3"];
             $nota4 = (float) $_POST["nota4"];
             $nota5 = (float) $_POST["nota5"];
+            $frequencia = (int) $_POST["frequencia"];
             
             if ($idade <= 0 || $nota1 < 0 || $nota1 >10 || $nota2 < 0 ||  $nota2 >10 || $nota3 < 0 || $nota3 >10 || $nota4 < 0 || $nota4 >10 || $nota5 < 0 || $nota5 >10 ) {
                 $erro = "A NOTA DEVE SER MENOR QUE 10 E A IDADE MAIOR QUE 0.";
@@ -67,8 +68,9 @@
 
     <form method="POST">
 
-        <input type="text" id="name" name="name" placeholder="Digite seu nome">
-        <input type="number" id="idade" name="idade" placeholder="Digite sua idade"><br><br>
+        <input type="text" id="name" name="name" placeholder="Digite seu nome:">
+        <input type="number" id="idade" name="idade" placeholder="Digite sua idade:"><br><br>
+        <input type="number" id="frequencia" name="frequencia" placeholder="Digite sua frequência:"><br><br>
         <input type="number" step="any" id="nota1" name="nota1" placeholder="Digite sua nota da 1° prova:"><br><br>
         <input type="number" step="any" id="nota2" name="nota2" placeholder="Digite sua nota da 2° prova:"><br><br>
         <input type="number" step="any" id="nota3" name="nota3" placeholder="Digite sua nota da 3° prova:"><br><br>
@@ -87,6 +89,7 @@
     
         <h1>Nome: <?= $nome ?></h1>
         <h2>Idade: <?= $idade ?></h2>
+        <h2>Frequência: <?= $frequencia ?></h2>
         <h2>Média final: <?= $media?></h2>
         <h2>Falta <?= $pontos?> pontos para atingir a média.</h2>
         <h2>Status: <span style="color: <?= $corStatus ?>;"><?= $resultado ?></span></h2>
