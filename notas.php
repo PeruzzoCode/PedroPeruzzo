@@ -86,7 +86,7 @@
         <h2>Status: <?= $resultado?></h2>
         <h2>Falta <?= $pontos?> pontos para atingir a média.</h2>
         <h2>Média final: <?= $media?></h2>
-        <h1 style="color: red; font-wheight: bold;"><?= $erro ?></h1>
+        <h1 style="color: red;"><b><?= $erro ?></h1>
         
         <?php  } ?>
 
