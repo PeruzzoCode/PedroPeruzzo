@@ -59,11 +59,11 @@
 
         <input type="text" id="name" name="name" placeholder="Digite seu nome">
         <input type="number" id="idade" name="idade" placeholder="Digite sua idade"><br><br>
-        <input type="number" id="nota1" name="nota1" placeholder="Digite sua nota da 1° prova:"><br><br>
-        <input type="number" id="nota2" name="nota2" placeholder="Digite sua nota da 2° prova:"><br><br>
-        <input type="number" id="nota3" name="nota3" placeholder="Digite sua nota da 3° prova:"><br><br>
-        <input type="number" id="nota4" name="nota4" placeholder="Digite sua nota da 4° prova:"><br><br>
-        <input type="number" id="nota5" name="nota5" placeholder="Digite sua nota da 5° prova:"><br><br>
+        <input type="number" step="any" id="nota1" name="nota1" placeholder="Digite sua nota da 1° prova:"><br><br>
+        <input type="number" step="any" id="nota2" name="nota2" placeholder="Digite sua nota da 2° prova:"><br><br>
+        <input type="number" step="any" id="nota3" name="nota3" placeholder="Digite sua nota da 3° prova:"><br><br>
+        <input type="number" step="any" id="nota4" name="nota4" placeholder="Digite sua nota da 4° prova:"><br><br>
+        <input type="number" step="any" id="nota5" name="nota5" placeholder="Digite sua nota da 5° prova:"><br><br>
 
 
 
