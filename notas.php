@@ -9,7 +9,7 @@
         $media=0;
         $resultado="";
         $erro="";
-        $pontos=5;
+        $pontos=0;
         
 
         if ($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -20,7 +20,6 @@
             $nota3 = (float) $_POST["nota3"];
             $nota4 = (float) $_POST["nota4"];
             $nota5 = (float) $_POST["nota5"];
-            $pontos = (float) $_POST["pontos"];
             $erro = $_POST["erro"];
             
             if ($idade <= 0 || $nota1 < 0 || $nota1 >10 || $nota2 < 0 ||  $nota2 >10 || $nota3 < 0 || $nota3 >10 || $nota4 < 0 || $nota4 >10 || $nota5 < 0 || $nota5 >10 ) {
@@ -41,12 +40,13 @@
             } 
 
             elseif ($media >=5 && $media<7) { 
-                $resultado = "de Recuperação. Faltam "; $pontos = "para sua aprovação";
-
+                $resultado = "de Recuperação";
+                $pontos = 7 - $media;
             }
             
             else {
                 $resultado = "Reprovado";
+                $pontos = 7 - $media;
             }
         }
     ?>
@@ -81,7 +81,8 @@
     
         <h1>Relatório do aluno: <?= $nome ?></h1>
         <h2>Idade: <?= $idade ?></h2>
-        <h2>Status: <?= $resultado?> <?= $pontos?></h2>
+        <h2>Status: <?= $resultado?></h2>
+        <h2>Faltam <?= $pontos?> pontos para atingir a média.</h2>
         <h2>Média final: <?= $media?></h2>
         <h1><?= $erro?></h1>
         
