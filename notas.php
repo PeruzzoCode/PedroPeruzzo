@@ -30,13 +30,13 @@
                 $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3)) /10 ;
             }
 
-            if ($media >=7){
-                $resultado = "Aprovado";
-            } 
-
-            elseif ($media >= 10){
+            if ($media = 10){
                 $resultado = "APROVADO COM EXELÊNCIA";
             }
+
+            elseif ($media >=7 ){
+                $resultado = "Aprovado";
+            } 
 
             elseif ($media >=5 && $media<7) { 
                 $resultado = "de Recuperação";
