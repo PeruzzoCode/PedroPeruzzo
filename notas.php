@@ -32,7 +32,7 @@
                 $media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 1) + ($nota4 * 1) + ($nota5 * 3)) /10 ;
             }
 
-            if ($media == 10){
+            if ($media == 10 && $frequencia>=75){
                 $resultado = "APROVADO COM EXELÊNCIA";
                 $corStatus = "green";
             }
@@ -89,7 +89,7 @@
     
         <h1>Nome: <?= $nome ?></h1>
         <h2>Idade: <?= $idade ?></h2>
-        <h2>Frequência: <?= $frequencia ?></h2>
+        <h2>Frequência: <?= $frequencia ?>%</h2>
         <h2>Média final: <?= $media?></h2>
         <h2>Falta <?= $pontos?> pontos para atingir a média.</h2>
         <h2>Status: <span style="color: <?= $corStatus ?>;"><?= $resultado ?></span></h2>
