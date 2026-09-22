@@ -1,4 +1,28 @@
-.card {
-    background-color: brown;
-    size: 100px;
-} 
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h1, h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
