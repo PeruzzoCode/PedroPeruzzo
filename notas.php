@@ -33,25 +33,33 @@
             }
 
             if ($media == 10 && $frequencia>=75){
-                $resultado = "APROVADO COM EXELÊNCIA";
+                $resultado = "APROVADO COM EXELÊNCIA!!!";
                 $corStatus = "green";
             }
 
-            elseif ($media >=7 ){
-                $resultado = "Aprovado";
+            elseif ($media >=7 && $frequencia>=75){
+                $resultado = "Aprovado.";
                 $corStatus = "green";
             } 
 
-            elseif ($media >=5 && $media<7) { 
-                $resultado = "Recuperação";
+            elseif ($media >=5 && $media<7 && $frequencia>=75) { 
+                $resultado = "Recuperação.";
                 $corStatus = "orange";
                 $pontos = 7 - $media;
             }
             
-            else {
-                $resultado = "Reprovado";
+            elseif ($media <=4.9 && $frequencia>=75){
+                $resultado = "Reprovado por nota.";
                 $corStatus = "red";
                 $pontos = 7 - $media;
+            }
+
+            elseif ($media >=5 && $frequencia>=75){
+                $resultado = "Reprovado por frequência.";
+            }
+
+            else {
+                $resultado = "Reprovado por nota e frequência";
             }
         }
     ?>
@@ -68,7 +76,7 @@
 
     <form method="POST">
 
-        <input type="text" id="name" name="name" placeholder="Digite seu nome:">
+        <input type="text" id="name" name="name" placeholder="Digite seu nome:"><br><br>
         <input type="number" id="idade" name="idade" placeholder="Digite sua idade:"><br><br>
         <input type="number" id="frequencia" name="frequencia" placeholder="Digite sua frequência:"><br><br>
         <input type="number" step="any" id="nota1" name="nota1" placeholder="Digite sua nota da 1° prova:"><br><br>
