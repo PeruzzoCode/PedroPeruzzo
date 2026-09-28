@@ -33,7 +33,7 @@ else{
 
         <button type="submit">Entrar</button>
 
-        /*Estou usando POST, pois nao aparece na url (é mais seguro para login)*/
+        <!--  Estou usando POST, pois nao aparece na url (é mais seguro para login) -->
 
     </form>
 
