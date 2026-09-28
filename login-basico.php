@@ -1,6 +1,6 @@
 <?php 
  $usuario="";
- $senha=0;
+ $senha=123;
  $resultado="";
 
  if ($_SERVER["REQUEST_METHOD"]=="POST"){
