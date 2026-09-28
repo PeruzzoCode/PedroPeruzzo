@@ -29,7 +29,7 @@ else{
     <form method = "POST">
 
         <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário: ">
-        <input type="text" id="senha" name="senha" placeholder="Digite sua senha: ">
+        <input type="number" id="senha" name="senha" placeholder="Digite sua senha: ">
 
         <button type="submit">Entrar</button>
 
