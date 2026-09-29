@@ -1,8 +1,6 @@
 <?php
-// Utilizando require para carregar o arquivo de conexão
 require 'conexao.php';
 
-// Criando a tabela através do PHP utilizando CREATE TABLE IF NOT EXISTS
 $sqlTabela = "
     CREATE TABLE IF NOT EXISTS jogos (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -11,25 +9,18 @@ $sqlTabela = "
         nota INT NOT NULL
     )
 ";
-// Executando a criação da tabela
 $pdo->exec($sqlTabela);
 
-// Verificando se o formulário foi enviado (método POST)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    // Recebendo as informações enviadas pelo formulário utilizando $_POST
     $nome = $_POST["nome"];
     $genero = $_POST["genero"];
     $nota = $_POST["nota"];
 
-    // Criando o comando SQL utilizando INSERT INTO
-    // (Nota: o uso direto de variáveis em exec() requer atenção em produção devido a SQL Injection, mas segue estritamente o requisito pedido)
     $sqlInsert = "INSERT INTO jogos (nome, genero, nota) VALUES ('$nome', '$genero', $nota)";
     
-    // Executando o comando utilizando $pdo->exec()
     $pdo->exec($sqlInsert);
 
-    // Mensagem de sucesso
     echo "Jogo cadastrado com sucesso!<br><br>";
 }
 ?>
