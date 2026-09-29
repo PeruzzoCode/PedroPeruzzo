@@ -24,7 +24,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="idade.php">Verificador de idade</a><br><br>
+    <br><br><a href="idade.php">Verificador de idade</a><br><br>
     <a href="notas.php">Verificador de notas</a><br><br>
     <a href="notas-desafio.php">Verificador de notas (desafio)</a><br><br>
     <a href="login-basico.php">Login Básico</a><br><br>
