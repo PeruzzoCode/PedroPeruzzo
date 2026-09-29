@@ -47,11 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <form method="POST" action="">
     
-    <input type="text" id="nome" name="nome" required><br><br>
+    <input type="text" id="nome" name="nome" placeholder="Digite o nome do jogo: "><br><br>
 
-    <input type="text" id="genero" name="genero" required><br><br>
+    <input type="text" id="genero" name="genero" placeholder="Digite o gênero do jogo: "><br><br>
 
-    <input type="number" id="nota" name="nota" required><br><br>
+    <input type="number" id="nota" name="nota" placeholder="Digite a nota do jogo: "><br><br>
 
     <input type="submit" value="Cadastrar">
 </form>
