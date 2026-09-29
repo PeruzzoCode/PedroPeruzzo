@@ -10,7 +10,7 @@ $senha = "315!@#";
 //PDO = PHP Data Objects = ferramenta do PHP para conversar com banco de dados.
 
 try {
-    $pdo = new PDO("mysql:host$host;dbname=$banco;charset=utf8mb4", $usuario,$senha);
+    $pdo = new PDO("mysql:host=$host;dbname=$banco;charset=utf8mb4", $usuario,$senha);
 
 //->Serve para puxar algo que pertence aquele objeto
 //-> PDO::ATTR_ERRMODE - é para configurar o modo de erros dentro do PDO
@@ -21,7 +21,7 @@ try {
     );
 
     echo "Conectado com sucesso!";
-    
+
 } catch (PDOException $erro){
 
     echo "Eroo ao conectar:".$erro->getMessage();
