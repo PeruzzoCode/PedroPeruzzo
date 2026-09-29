@@ -4,8 +4,8 @@
  $resultado="";
 
  if ($_SERVER["REQUEST_METHOD"]=="POST"){
-    $usuario = $_GET["usuario"];
-    $senha = $_GET["senha"];
+    $usuario = $_POST["usuario"];
+    $senha = $_POST["senha"];
 
 if ($usuario == "Pedro" && $senha == 123){
     $resultado = "Login realizado com sucesso";
