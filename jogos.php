@@ -10,6 +10,11 @@ $sqlTabela = "
         ano_lancamento INT
     )
 ";
+
+$sqlInsert = "ALTER TABLE jogos ADD ano_lancamento INT";
+
+
+
 $pdo->exec($sqlTabela);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -17,9 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
     $genero = $_POST["genero"];
     $nota = $_POST["nota"];
-    $ano_lancamento = $_POST ["ano_lancamento"];
 
-    $sqlInsert = "INSERT INTO jogos (nome, genero, nota, ano_lancamento) VALUES ('$nome', '$genero', $nota, 'ano_lancamento',)";
+    $sqlInsert = "INSERT INTO jogos (nome, genero, nota) VALUES ('$nome', '$genero', $nota)";
     
     $pdo->exec($sqlInsert);
 
