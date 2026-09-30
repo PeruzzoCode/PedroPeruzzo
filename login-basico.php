@@ -8,7 +8,7 @@
     $senha = $_POST["senha"];
 
 if ($usuario == "Pedro" && $senha == 123){
-    $resultado = "Login realizado com sucesso";
+    $resultado = '<a href="jogos.php">Tabela de Jogos</a>';
 }
 else{
     $resultado = "Usuário ou senha incorretos";
@@ -32,9 +32,8 @@ else{
         <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário: ">
         <input type="number" id="senha" name="senha" placeholder="Digite sua senha: ">
 
-        <a href="jogos.php">Tabela de Jogos
         <button type="submit">Entrar</button>
-        </a><br><br>
+        <br><br>
 
         <!--  Estou usando POST, pois nao aparece na url (é mais seguro para login) -->
 
