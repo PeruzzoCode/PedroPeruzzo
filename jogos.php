@@ -6,7 +6,8 @@ $sqlTabela = "
         id INT AUTO_INCREMENT PRIMARY KEY,
         nome VARCHAR(100) NOT NULL,
         genero VARCHAR(50) NOT NULL,
-        nota INT NOT NULL
+        nota INT NOT NULL,
+        ano_lancamento INT
     )
 ";
 $pdo->exec($sqlTabela);
@@ -16,13 +17,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
     $genero = $_POST["genero"];
     $nota = $_POST["nota"];
+    $ano_lancamento = $_POST ["ano_lancamento"];
 
-    $sqlInsert = "INSERT INTO jogos (nome, genero, nota) VALUES ('$nome', '$genero', $nota)";
+    $sqlInsert = "INSERT INTO jogos (nome, genero, nota, ano_lancamento) VALUES ('$nome', '$genero', $nota, 'ano_lancamento',)";
     
     $pdo->exec($sqlInsert);
 
+
+    //exec= executa quando voce nao precisa receber registros de volta
     echo "Jogo cadastrado com sucesso!<br><br>";
 }
+
+    //BUSCAR TODOS OS JOGOS REGISTRADOS NO BANCO DE DADOS
+    $buscar = "SELECT * FROM jogos";
+
+    //query= executa quando voce precisa receber registros de volta
+    $stmt = $pdo -> query($buscar);
+
+    $jogos = $stmt ->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 
@@ -45,7 +58,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <input type="number" id="nota" name="nota" placeholder="Digite a nota do jogo: "><br><br>
 
+    <input type="number" id="ano_lancamento" name="ano_lancamento" placeholder="Digite a data de lançamento: "><br><br>
+
     <input type="submit" value="Cadastrar">
 </form>
+
+    <h2>JOGOS CADASTRADOS</h2>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Gênero</th>
+            <th>Nota</th>
+            <th>Data de lançamento</th>
+        </tr>
+
+    <!--foreach()-> para cada item nessa lista, faca tal coisa-->
+        <?php foreach($jogos as $jogo){?>
+            <tr>
+                <td><?= $jogo ["id"] ?></td>
+                <td><?= $jogo ["nome"] ?></td>
+                <td><?= $jogo ["ano_lancamento"] ?></td>
+                <td><?= $jogo ["genero"] ?></td>
+                <td><?= $jogo ["nota"] ?></td>
+            </tr>
+        <?php } ?>
+    </table>
+
 </body>
 </html>
