@@ -12,7 +12,6 @@ $sqlTabela = "
 ";
 
 $pdo->exec($sqlTabela);
-echo "debug1";
 
 // $sqlInsert = "ALTER TABLE jogos ADD ano_lancamento INT";
 // $pdo->exec($sqlInsert);
@@ -30,7 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sqlInsert = "INSERT INTO jogos (nome, genero, nota) VALUES ('$nome', '$genero', $nota)";
     
     $pdo->exec($sqlInsert);
-    echo "debug3";
 
 
     //exec= executa quando voce nao precisa receber registros de volta
@@ -88,9 +86,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <tr>
                 <td><?= $jogo ["id"] ?></td>
                 <td><?= $jogo ["nome"] ?></td>
-                <td><?= $jogo ["ano_lancamento"] ?></td>
                 <td><?= $jogo ["genero"] ?></td>
                 <td><?= $jogo ["nota"] ?></td>
+                <td><?= $jogo ["ano_lancamento"] ?></td>
             </tr>
         <?php } ?>
     </table>
