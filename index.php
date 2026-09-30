@@ -32,7 +32,6 @@
     <a href="notas-desafio.php">Verificador de notas (desafio)</a><br><br>
     <a href="login-basico.php">Login Básico</a><br><br>
     <a href="jogos.php">Tabela de Jogos</a><br><br>
-    <br><br><br><br><br><br><a href="index.php">Voltar ao início!</a>
 
 </body>
 </html>
