@@ -23,6 +23,14 @@ button {
 }
 
 h1, h2 {
-    font-size: 188px;
+    font-size: 18px;
     margin-top: 10px;
+}
+
+a {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
 }
