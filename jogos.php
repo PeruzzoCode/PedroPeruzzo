@@ -81,15 +81,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <form method="POST" action="">
     
-    <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário: ">
-    <input type="number" id="senha" name="senha" placeholder="Digite sua senha: ">  
-    
-    <?php if($resultado != "") { ?>
-        <h2><?= $resultado?></h2>
-        
-        <?php  } ?>
+        <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário: ">
+        <input type="number" id="senha" name="senha" placeholder="Digite sua senha: ">
 
-        <br><br><br><br><br><br><br><br>
+        <button type="submit">Entrar</button>
+    </form>
+
+        <?php if($resultado != "") { ?>
+    <h1><?= $resultado?></h1>
+
+        <?php  } ?>
+        <br><br><br>
 
     <input type="text" id="nome" name="nome" placeholder="Digite o nome do jogo: "><br><br>
 
