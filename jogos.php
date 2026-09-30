@@ -94,6 +94,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </tr>
         <?php } ?>
     </table>
-
+    <br><br><br><br><br><br><a href="index.php">Voltar ao início!</a>
 </body>
 </html>

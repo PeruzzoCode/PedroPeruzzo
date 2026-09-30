@@ -38,7 +38,8 @@
     <?php if($resultado != "") { ?>
     
         <h1>O <?= $nome ?> é <?= $resultado ?> de idade. Ele tem <?= $idade ?> anos.</h1>
-        
+
+        <a href="index.php">Voltar ao início!</a>      
         <?php  } ?>
 
     

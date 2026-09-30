@@ -42,6 +42,6 @@ else{
         <h1><?= $resultado?></h1>
         
         <?php  } ?>
-
+        <br><br><br><br><br><br><a href="index.php">Voltar ao início!</a>
 </body>
 </html>

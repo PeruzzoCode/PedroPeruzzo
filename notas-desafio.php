@@ -72,7 +72,7 @@
         <?php  } ?>
 
     
-        
+        <br><br><br><br><br><br><a href="index.php">Voltar ao início!</a>
 
 </body>
 </html>
