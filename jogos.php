@@ -11,11 +11,14 @@ $sqlTabela = "
     )
 ";
 
-$sqlInsert = "ALTER TABLE jogos ADD ano_lancamento INT";
-
-
-
 $pdo->exec($sqlTabela);
+
+
+$sqlInsert = "ALTER TABLE jogos ADD ano_lancamento INT";
+$pdo->exec($sqlInsert);
+
+
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
