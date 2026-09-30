@@ -25,8 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST["nome"];
     $genero = $_POST["genero"];
     $nota = $_POST["nota"];
+    $ano_lancamento = $_POST["ano_lancamento"];
 
-    $sqlInsert = "INSERT INTO jogos (nome, genero, nota) VALUES ('$nome', '$genero', $nota)";
+
+    $sqlInsert = "INSERT INTO jogos (nome, genero, nota, ano_lancamento) VALUES ('$nome', '$genero', $nota, $ano_lancamento)";
     
     $pdo->exec($sqlInsert);
 
