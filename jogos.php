@@ -13,7 +13,7 @@ $sqlTabela = "
 
 $pdo->exec($sqlTabela);
 
-// $sqlInsert = "ALTER TABLE jogos ADD ano_lancamento INT";
+/// $sqlInsert = "ALTER TABLE jogos ADD ano_lancamento INT";
 // $pdo->exec($sqlInsert);
 // echo "debug2";
 
@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <input type="number" id="nota" name="nota" placeholder="Digite a nota do jogo: "><br><br>
 
-    <input type="number" id="ano_lancamento" name="ano_lancamento" placeholder="Digite a data de lançamento: "><br><br>
+    <input type="number" id="ano_lancamento" name="ano_lancamento" placeholder="Digite a data de lançamento do jogo: "><br><br>
 
     <input type="submit" value="Cadastrar">
 </form>
