@@ -14,9 +14,9 @@ $sqlTabela = "
 $pdo->exec($sqlTabela);
 echo "debug1";
 
-$sqlInsert = "ALTER TABLE jogos ADD ano_lancamento INT";
-$pdo->exec($sqlInsert);
-echo "debug2";
+// $sqlInsert = "ALTER TABLE jogos ADD ano_lancamento INT";
+// $pdo->exec($sqlInsert);
+// echo "debug2";
 
 
 
