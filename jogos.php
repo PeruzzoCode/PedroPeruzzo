@@ -81,6 +81,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="submit" value="Cadastrar">
 </form>
 
+<h1><?= $mensagem?></h1>
+
     
     <h2>JOGOS CADASTRADOS</h2>
 
@@ -107,12 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php } ?>
     </table>
 
-    <h1><?= $mensagem?></h1>
-
-    <?php if($mensgem != "") { ?>
-        
-        
-        <?php  } ?>
+    
         
     <br><br><br><br><br><br><a href="index.php">Voltar ao início!</a>
 </body>
