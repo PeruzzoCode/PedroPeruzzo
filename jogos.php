@@ -107,8 +107,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php } ?>
     </table>
 
+    <h1><?= $mensagem?></h1>
+
     <?php if($mensgem != "") { ?>
-        <h1><?= $mensagem?></h1>
+        
         
         <?php  } ?>
         
