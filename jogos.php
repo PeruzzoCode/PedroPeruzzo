@@ -93,10 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <th>Data de lançamento</th>
         </tr>
 
-        <?php if($mensgem != "") { ?>
-        <h1><?= $mensagem?></h1>
         
-        <?php  } ?>
 
     <!--foreach()-> para cada item nessa lista, faca tal coisa-->
         <?php foreach($jogos as $jogo){?>
@@ -109,6 +106,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </tr>
         <?php } ?>
     </table>
+
+    <?php if($mensgem != "") { ?>
+        <h1><?= $mensagem?></h1>
+        
+        <?php  } ?>
+        
     <br><br><br><br><br><br><a href="index.php">Voltar ao início!</a>
 </body>
 </html>
