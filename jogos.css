@@ -1,9 +1,14 @@
 body {
     font-family: sans-serif;
     background-color: #f0f0f0;
-    max-width: 400px;
+    max-width: 500px;
     margin: 40px auto;
     padding: 20px;
+}
+
+h1, h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 input, button {
@@ -12,9 +17,10 @@ input, button {
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-border-box;
 }
 
-button {
+input[type="submit"], button {
     background-color: #007bff;
     color: white;
     border: none;
@@ -22,7 +28,25 @@ button {
     cursor: pointer;
 }
 
-h1, h2 {
-    font-size: 18px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
     margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
 }
