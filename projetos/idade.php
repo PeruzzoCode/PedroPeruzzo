@@ -1,4 +1,7 @@
 <?php
+
+require __DIR__. "/../conexao.php";
+
         $nome="";
         $idade=0;
         $resultado="";
