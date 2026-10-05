@@ -184,11 +184,26 @@
                 </div>
                 <div class="contato-item">
                     <h3>Gmail</h3>
+
+
+
+
+
+
+
                     <p>pedro.peruzzo@gmail.com</p>
                 </div>
             </div>
 
         </section>
     </main>
+
+    <footer>
+
+        <p>
+            Desenvolvido por <a href="https://pedro315.devlook.xyz">Pedro Peruzzo</a> - 2026
+        </p>
+
+    </footer>
 </body>
 </html>
