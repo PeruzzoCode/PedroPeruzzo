@@ -30,7 +30,8 @@
     <br><br><a href="idade.php">Verificador de idade</a><br><br>
     <a href="notas.php">Verificador de notas</a><br><br>
     <a href="notas-desafio.php">Verificador de notas (desafio)</a><br><br>
-    <a href="login-basico.php">Login para tabela jogos</a><br><br>
+    <a href="login-basico.php">Login básico</a><br><br>
+    <a href="jogos.php">Tabela de jogos</a><br><br>
 
 </body>
 </html>

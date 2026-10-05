@@ -8,7 +8,7 @@
     $senha = $_POST["senha"];
 
 if ($usuario == "Pedro" && $senha == 123){
-    $resultado = '<a href="jogos.php" >Tabela de Jogos</a>';
+    $resultado = "Logado com sucesso!";
 }
 else{
     $resultado = "Usuário ou senha incorretos";

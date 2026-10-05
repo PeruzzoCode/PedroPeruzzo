@@ -1,5 +1,6 @@
 <?php
-require 'conexao.php';
+
+require __DIR__. "/../conexao.php";
 
 $sqlTabela = "
     CREATE TABLE IF NOT EXISTS jogos (
@@ -26,11 +27,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $genero = $_POST["genero"];
     $nota = $_POST["nota"];
     $ano_lancamento = $_POST["ano_lancamento"];
+    $usuario = $_POST["usuario"];
+    $senha = $_POST["senha"];
 
 
+
+    if ($usuario == "pedro" && $senha == "123"){
     $sqlInsert = "INSERT INTO jogos (nome, genero, nota, ano_lancamento) VALUES ('$nome', '$genero', $nota, $ano_lancamento)";
     
     $pdo->exec($sqlInsert);
+
+    $mensagem = "Jogo cadastrado!";
+
+    }
+
+    else {
+        $mensagem == "Senha ou usuário incorreto!";
+    }
 
 
     //exec= executa quando voce nao precisa receber registros de volta
@@ -60,6 +73,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <h1>Cadastro de Jogos</h1>
 
 <form method="POST" action="">
+
+    <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário: ">
+    <input type="number" id="senha" name="senha" placeholder="Digite sua senha: ">
 
 
     <input type="text" id="nome" name="nome" placeholder="Digite o nome do jogo: "><br><br>
