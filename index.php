@@ -33,5 +33,19 @@
     <a href="login-basico.php">Login básico</a><br><br>
     <a href="jogos.php">Tabela de jogos</a><br><br>
 
+    <header>
+            <nav class="navbar">
+
+                <h2 class="logo">Meu Portifólio</h2>
+
+                <ul class="menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+    </header>
 </body>
 </html>

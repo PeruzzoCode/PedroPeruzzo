@@ -21,7 +21,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="idade.css">
+    <link rel="stylesheet" href="/css/idade.css">
     <title>VERIFICADOR DE IDADE!</title>
 </head>
 <body>
@@ -39,7 +39,7 @@
     
         <h1>O <?= $nome ?> é <?= $resultado ?> de idade. Ele tem <?= $idade ?> anos.</h1>
 
-        <a href="index.php">Voltar ao início!</a>      
+        <a href="../index.php">Voltar ao início!</a>      
         <?php  } ?>
 
     

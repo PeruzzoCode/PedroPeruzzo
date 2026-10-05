@@ -22,7 +22,7 @@ else{
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login-basico.css">
+    <link rel="stylesheet" href="/css/login-basico.css">
     <title>Login</title>
 </head>
 <body>
@@ -43,6 +43,6 @@ else{
         <h1><?= $resultado?></h1>
         
         <?php  } ?>
-        <br><br><br><br><br><br><a href="index.php">Voltar ao início!</a>
+        <br><br><br><br><br><br><a href="../index.php">Voltar ao início!</a>
 </body>
 </html>

@@ -41,7 +41,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="notas-desafio.css">
+    <link rel="stylesheet" href="/css/notas-desafio.css">
     <title>Calculadora de média</title>
 </head>
 <body>
@@ -72,7 +72,7 @@
         <?php  } ?>
 
     
-        <br><br><br><br><br><br><a href="index.php">Voltar ao início!</a>
+        <br><br><br><br><br><br><a href="../index.php">Voltar ao início!</a>
 
 </body>
 </html>

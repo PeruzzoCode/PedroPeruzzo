@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="jogos.css">
+    <link rel="stylesheet" href="/css/jogos.css">
     <title>Cadastro de jogos</title>
 </head>
 <body>
@@ -111,6 +111,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     
         
-    <br><br><br><br><br><br><a href="index.php">Voltar ao início!</a>
+    <br><br><br><br><br><br><a href="../index.php">Voltar ao início!</a>
 </body>
 </html>
