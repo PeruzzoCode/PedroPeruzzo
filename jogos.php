@@ -81,10 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="submit" value="Cadastrar">
 </form>
 
-    <?php if($mensgem != "") { ?>
-        <h1><?= $mensagem?></h1>
-        
-        <?php  } ?>
+    
     <h2>JOGOS CADASTRADOS</h2>
 
     <table>
@@ -95,6 +92,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <th>Nota</th>
             <th>Data de lançamento</th>
         </tr>
+
+        <?php if($mensgem != "") { ?>
+        <h1><?= $mensagem?></h1>
+        
+        <?php  } ?>
 
     <!--foreach()-> para cada item nessa lista, faca tal coisa-->
         <?php foreach($jogos as $jogo){?>
