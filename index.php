@@ -126,15 +126,15 @@
                     <div projetos-card>
                     <div class="projetos-numero">02</div>
                     <h3>Verificador de notas</h3>
-                    <p>Verificção de login, com uma mensagem informando
-                        se o login está correto ou não.
+                    <p>Aplicação simples, criada para praticar manipulação de formulários, cálculos 
+                        e validação de dados.
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="projetos/idade.php" class="link-projeto">
+                    <a href="projetos/notas.php" class="link-projeto">
                         Ver projeto ➡
                     </a>
 
@@ -148,7 +148,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="projetos/idade.php" class="link-projeto">
+                    <a href="projetos/login-basico.php" class="link-projeto">
                         Ver projeto ➡
                     </a>
 
@@ -162,7 +162,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="projetos/idade.php" class="link-projeto">
+                    <a href="projetos/jogos.php" class="link-projeto">
                         Ver projeto ➡
                     </a>
                     
