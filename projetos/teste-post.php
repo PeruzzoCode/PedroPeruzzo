@@ -1,5 +1,4 @@
 <?php
-require __DIR__. "/../conexao.php";
 
 echo "metodo recebido: ";
 echo $_SERVER["REQUEST_METHOD"];
