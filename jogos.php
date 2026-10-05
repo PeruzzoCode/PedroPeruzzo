@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__. "/../conexao.php";
+require __DIR__. "/conexao.php";
 
 $sqlTabela = "
     CREATE TABLE IF NOT EXISTS jogos (
