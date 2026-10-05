@@ -18,8 +18,7 @@ $pdo->exec($sqlTabela);
 // $pdo->exec($sqlInsert);
 // echo "debug2";
 
-
-
+$mensagem = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
@@ -30,24 +29,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST["usuario"];
     $senha = $_POST["senha"];
 
-
-
     if ($usuario == "pedro" && $senha == "123"){
-    $sqlInsert = "INSERT INTO jogos (nome, genero, nota, ano_lancamento) VALUES ('$nome', '$genero', $nota, $ano_lancamento)";
-    
-    $pdo->exec($sqlInsert);
+        $sqlInsert = "INSERT INTO jogos (nome, genero, nota, ano_lancamento) VALUES ('$nome', '$genero', $nota, $ano_lancamento)";
+        
+        $pdo->exec($sqlInsert);
 
-    $mensagem = "Jogo cadastrado!";
-
+        $mensagem = "Jogo cadastrado com sucesso!<br><br>";
     }
-
     else {
-        $mensagem == "Senha ou usuário incorreto!";
+        $mensagem = "Senha ou usuário incorreto!<br><br>";
     }
 
-
-    //exec= executa quando voce nao precisa receber registros de volta
-    echo "Jogo cadastrado com sucesso!<br><br>";
+    echo $mensagem;
 }
 
     //BUSCAR TODOS OS JOGOS REGISTRADOS NO BANCO DE DADOS
@@ -76,7 +69,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário: ">
     <input type="number" id="senha" name="senha" placeholder="Digite sua senha: ">
-
 
     <input type="text" id="nome" name="nome" placeholder="Digite o nome do jogo: "><br><br>
 
