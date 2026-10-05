@@ -81,6 +81,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <input type="submit" value="Cadastrar">
 </form>
 
+    <?php if($mensgem != "") { ?>
+        <h1><?= $mensagem?></h1>
+        
+        <?php  } ?>
     <h2>JOGOS CADASTRADOS</h2>
 
     <table>
