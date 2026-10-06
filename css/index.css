@@ -84,3 +84,61 @@ header {
     color: #aaaaaa;
     margin-bottom: 20px;
 }
+
+
+.incio-conteudo > p {
+    max-width: 600px;
+}
+
+.botao {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 12px 25px;
+
+    background-color: #2563eb;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #1d4ed8
+}
+
+.secao {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.titulo-secao {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitulo-secao {
+    text-align: center;
+    color: #666666;
+    margin-bottom: 40px;
+}
+
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.foto {
+    width: 200px;
+    height: 200px;
+    min-width: 200px;
+    border-radius: 50%;
+    background-color: #2563eb;
+}
