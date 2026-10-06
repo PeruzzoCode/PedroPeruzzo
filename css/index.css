@@ -12,7 +12,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
     color: #222222;
-    line-height: 1.6
+    line-height: 1.6;
 }
 
 header {
@@ -25,11 +25,9 @@ header {
 .navbar {
     max-width: 1100px;
     margin: auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 20px;
 }
 
@@ -40,7 +38,6 @@ header {
 .menu {
     display: flex;
     gap: 25px;
-
     list-style: none;
 }
 
@@ -54,8 +51,8 @@ header {
     color: #60a5fa;
 }
 
-.inicio{
-    min-width: 85vh;
+.inicio {
+    min-height: 85vh; 
     display: flex;
     align-items: center;
     background-color: #111827;
@@ -85,29 +82,23 @@ header {
     margin-bottom: 20px;
 }
 
-
-.incio-conteudo > p {
+.inicio-conteudo > p { 
     max-width: 600px;
 }
 
 .botao {
     display: inline-block;
-
     margin-top: 30px;
     padding: 12px 25px;
-
     background-color: #2563eb;
     color: white;
-
     text-decoration: none;
-
     border-radius: 6px;
-
     font-weight: bold;
 }
 
 .botao:hover {
-    background-color: #1d4ed8
+    background-color: #1d4ed8;
 }
 
 .secao {
@@ -142,7 +133,7 @@ header {
     border-radius: 50%;
     background-color: #2563eb;
     color: white;
-    display: flex ;
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 60px;
@@ -163,6 +154,13 @@ header {
     background-color: #e5e7eb;
 }
 
+
+.secao-destaque > * {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .lista-habilidades {
     display: flex;
     justify-content: center;
@@ -179,13 +177,12 @@ header {
 }
 
 .habilidade:hover {
-    transform: translateY (-3px);
+    transform: translateY(-3px); 
 }
 
 .projetos-container {
     display: grid;
-    grid-template-columns: repeat (3, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr); 
 }
 
 .projeto-card {
@@ -193,7 +190,7 @@ header {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
-    transition: 0.3;
+    transition: 0.3s; 
 }
 
 .projeto-card:hover {
@@ -225,7 +222,7 @@ header {
     margin-bottom: 20px;
 }
 
-.tecnologias span{
+.tecnologias span {
     background-color: #dbeafe;
     color: #1e40af;
     padding: 5px 10px;
@@ -251,7 +248,7 @@ header {
     flex-wrap: wrap;
 }
 
-.contato-item{
+.contato-item {
     background-color: white;
     width: 280px;
     padding: 25px;
@@ -260,7 +257,7 @@ header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
 }
 
-.contato-item h3{
+.contato-item h3 {
     color: #2563eb;
     margin-bottom: 5px;
 }
