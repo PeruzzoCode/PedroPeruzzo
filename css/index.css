@@ -1,27 +1,23 @@
 * {
     margin: 0;
-    padding: 0;
+    padding:0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
     color: #222222;
     line-height: 1.6;
 }
-
 header {
-    background-color: #222222;
+    background-color: #111827;
     position: sticky;
     top: 0;
     z-index: 100;
 }
-
 .navbar {
     max-width: 1100px;
     margin: auto;
@@ -30,11 +26,9 @@ header {
     align-items: center;
     padding: 20px;
 }
-
 .logo {
     color: white;
 }
-
 .menu {
     display: flex;
     gap: 25px;
@@ -42,50 +36,40 @@ header {
 }
 
 .menu a {
-    color: #dddddd;
-    text-decoration: none;
-    font-weight: bold;
+    color: #dddddd
 }
-
 .menu a:hover {
     color: #60a5fa;
 }
-
 .inicio {
-    min-height: 85vh; 
+    min-height: 85vh;
     display: flex;
     align-items: center;
     background-color: #111827;
     color: white;
 }
-
 .inicio-conteudo {
     width: 1100px;
     max-width: 90%;
     margin: auto;
 }
-
 .saudacao {
     color: #60a5fa;
     font-size: 20px;
     margin-bottom: 5px;
 }
-
 .inicio h1 {
     font-size: 60px;
     margin-bottom: 5px;
 }
-
 .inicio h2 {
     font-size: 30px;
     color: #aaaaaa;
     margin-bottom: 20px;
 }
-
-.inicio-conteudo > p { 
+.inicio-conteudo > p {
     max-width: 600px;
 }
-
 .botao {
     display: inline-block;
     margin-top: 30px;
@@ -96,36 +80,30 @@ header {
     border-radius: 6px;
     font-weight: bold;
 }
-
 .botao:hover {
     background-color: #1d4ed8;
 }
-
 .secao {
     max-width: 1100px;
     margin: auto;
     padding: 80px 20px;
 }
-
 .titulo-secao {
     font-size: 35px;
     text-align: center;
     margin-bottom: 10px;
 }
-
 .subtitulo-secao {
     text-align: center;
     color: #666666;
     margin-bottom: 40px;
 }
-
 .sobre-conteudo {
     display: flex;
     align-items: center;
     gap: 50px;
     margin-top: 40px;
 }
-
 .foto {
     width: 200px;
     height: 200px;
@@ -139,89 +117,74 @@ header {
     font-size: 60px;
     font-weight: bold;
 }
-
 .sobre-texto h3 {
     font-size: 25px;
     margin-bottom: 15px;
 }
-
 .sobre-texto p {
     margin-bottom: 15px;
 }
-
-.secao-destaque {
+.secao-destaque{
     max-width: 100%;
     background-color: #e5e7eb;
 }
-
-
 .secao-destaque > * {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
 }
-
 .lista-habilidades {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
 }
-
 .habilidade {
     background-color: white;
     padding: 15px 25px;
     border-radius: 8px;
     font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 2px 8 rgba(0, 0, 0, 0.10);
 }
-
 .habilidade:hover {
-    transform: translateY(-3px); 
+    transform: translateY(-3px);
 }
-
 .projetos-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
-
 .projeto-card {
     background-color: white;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
-    transition: 0.3s; 
+    transition: 0.3s;
 }
-
 .projeto-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
-
 .projeto-numero {
     font-size: 35px;
     font-weight: bold;
     color: #2563eb;
     margin-bottom: 15px;
 }
-
 .projeto-card h3 {
     font-size: 22px;
     margin-bottom: 10px;
 }
-
 .projeto-card p {
     color: #555555;
     margin-bottom: 20px;
 }
-
 .tecnologias {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 20px;
 }
-
 .tecnologias span {
     background-color: #dbeafe;
     color: #1e40af;
@@ -230,24 +193,20 @@ header {
     font-size: 13px;
     font-weight: bold;
 }
-
 .link-projeto {
     color: #2563eb;
     text-decoration: none;
     font-weight: bold;
 }
-
 .link-projeto:hover {
     text-decoration: underline;
 }
-
 .contato-container {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
-
 .contato-item {
     background-color: white;
     width: 280px;
@@ -256,12 +215,10 @@ header {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
 }
-
 .contato-item h3 {
     color: #2563eb;
     margin-bottom: 5px;
 }
-
 footer {
     background-color: #111827;
     color: #cccccc;
