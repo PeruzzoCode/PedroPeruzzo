@@ -240,7 +240,7 @@ header {
     font-weight: bold;
 }
 
-.linl-projeto:hover {
+.link-projeto:hover {
     text-decoration: underline;
 }
 
@@ -270,4 +270,8 @@ footer {
     color: #cccccc;
     text-align: center;
     padding: 30px;
+}
+
+@media (max-width: 800px) {
+
 }
