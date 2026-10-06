@@ -38,8 +38,7 @@
                     em busca de oportunidades para aplicar 
                     meu conhecimentos em projetos reais.
                 </p>
-                <a href="#projetos" class="botao"></a>
-                Ver meus projetos
+                <a href="#projetos" class="botao">Ver meus projetos</a>
             </div>
         </section>
 
@@ -88,8 +87,9 @@
                 Alguns projetos desenvolvidos durante aulas.
             </p>
             <div class="projetos-container">
-                <div projetos-card>
-                    <div class="projetos-numero">01</div>
+                
+                <div class="projeto-card">
+                    <div class="projeto-numero">01</div>
                     <h3>Verificação de idade</h3>
                     <p>Sistema desenvolvido para praticar 
                         formulários e manipulação de dados.
@@ -102,9 +102,10 @@
                     <a href="projetos/idade.php" class="link-projeto">
                         Ver projeto ➡
                     </a>
+                </div>
 
-                    <div projetos-card>
-                    <div class="projetos-numero">02</div>
+                <div class="projeto-card">
+                    <div class="projeto-numero">02</div>
                     <h3>Verificador de notas</h3>
                     <p>Aplicação simples, criada para praticar manipulação de formulários, cálculos 
                         e validação de dados.
@@ -117,8 +118,10 @@
                     <a href="projetos/notas.php" class="link-projeto">
                         Ver projeto ➡
                     </a>
+                </div>
 
-                    <div class="projetos-numero">03</div>
+                <div class="projeto-card">
+                    <div class="projeto-numero">03</div>
                     <h3>Login básico</h3>
                     <p>Sistema desenvolvido para praticar 
                         formulários e manipulação de dados.
@@ -131,8 +134,10 @@
                     <a href="projetos/login-basico.php" class="link-projeto">
                         Ver projeto ➡
                     </a>
+                </div>
 
-                    <div class="projetos-numero">04</div>
+                <div class="projeto-card">
+                    <div class="projeto-numero">04</div>
                     <h3>Cadastro de jogos</h3>
                     <p>Conexão com banco de dados e criação de
                         tabelas com sql.
@@ -145,10 +150,11 @@
                     <a href="projetos/jogos.php" class="link-projeto">
                         Ver projeto ➡
                     </a>
-                    
                 </div>
+
             </div>
         </section>
+
         <section id="contato" class="secao secao-destaque"> 
             <h2 class="titulo-secao">Contato</h2>
             <p class="subtitulo-secao">Quer entrar em contato comigo?</p>
@@ -164,13 +170,6 @@
                 </div>
                 <div class="contato-item">
                     <h3>Gmail</h3>
-
-
-
-
-
-
-
                     <p>pedro.peruzzo@gmail.com</p>
                 </div>
             </div>
