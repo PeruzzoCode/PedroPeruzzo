@@ -28,9 +28,11 @@
     // 7. salvar no arquivo
     file_put_contents($caminho,
     $jsonAtualizado);
-
-    echo "DADOS RISTRADOR EM dados.json";
 }
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -50,5 +52,15 @@
         <input type="text" name="curso">
         <button type="submit">Cadastrar!</button>
     </form>
+    <h2>ALUNOS CADASTRADOS</h2>
+    <?php foreach($alunos as $aluno) { ?>
+        <h3>Nome: <?=  $aluno["nome"] ?></h3>
+        <p>Idade: <? $aluno["idade"]?></p>
+        <p>Curso: <? $aluno["curso"]?></p>
+    <?php } ?>
+
+
+
+
 </body>
 </html>
