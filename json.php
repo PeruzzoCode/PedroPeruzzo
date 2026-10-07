@@ -50,11 +50,20 @@
         <input type="number" name="idade">
         <label>Curso:</label>
         <input type="text" name="curso">
-        <button type="submit">Cadastrar!</button>
+        <button type="submit" name="acao" value="atualizar">Cadastrar!</button>
+    </form>
+    <form method="POST">
+        <label>Nome:</label>
+        <input type="text" name="nome">
+        <label> Idade:</label>
+        <input type="number" name="idade">
+        <label>Curso:</label>
+        <input type="text" name="curso">
+        <button type="submit" name="acao" value="atualizar">Autalizar!</button>
     </form>
     <h2>ALUNOS CADASTRADOS</h2>
     <?php foreach($alunos as $aluno) { ?>
-        <h3> <?=  $aluno["nome"] ?></h3>
+        <h3>Nome: <?=  $aluno["nome"] ?></h3>
         <p>Idade: <?=   $aluno["idade"]?></p>
         <p>Curso: <?=   $aluno["curso"]?></p>
     <?php } ?>
