@@ -16,7 +16,7 @@
     ];
 
     // 5. ADICIONAR O ALUNO NO ARRAY
-    $aluno[] = $novoAluno;
+    $alunos[] = $novoAluno;
 
     // 6. TRANSFORMAR ARRAY PHP EM JSON
     $jsonAtualizado = json_encode($alunos,
