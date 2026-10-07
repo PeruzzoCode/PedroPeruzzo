@@ -8,11 +8,12 @@
     // 3. TRANSFORMAR JSON EM ARRAY PHP
     $alunos = json_decode($json, true);
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // 4. CRIAR UM ALUNO
     $novoAluno = [
-        "nome" => "Pedro",
-        "idade" => 23,
-        "curso" => "Desenvolvimento de sistemas"
+        "nome" => $_POST["nome"],
+        "idade" => $_POST["idade"],
+        "curso" => $_POST["curso"]
     ];
 
     // 5. ADICIONAR O ALUNO NO ARRAY
@@ -29,7 +30,7 @@
     $jsonAtualizado);
 
     echo "DADOS RISTRADOR EM dados.json";
-
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,6 +41,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form method="POST">
+        <label>Nome:</label>
+        <input type="text" name="nome">
+        <label> Idade:</label>
+        <input type="number" name="idade">
+        <label>Curso:</label>
+        <input type="text" name="curso">
+        <button type="submit">Cadastrar!</button>
+    </form>
 </body>
 </html>
