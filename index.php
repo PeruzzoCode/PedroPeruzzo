@@ -152,6 +152,23 @@
                     </a>
                 </div>
 
+                <div class="projeto-card">
+                    <div class="projeto-numero">05</div>
+                    <h3>Chamado empresa TI</h3>
+                    <p>Sistema desenvolvido para criaar e resolver chamado,
+                        simulando como é em uma empresa.
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                        <span>JSON</span>
+                    </div>
+                    <a href="helpdesk.php" class="link-projeto">
+                        Ver projeto ➡
+                    </a>
+                </div>
+
             </div>
         </section>
 
