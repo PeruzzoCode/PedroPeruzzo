@@ -164,7 +164,7 @@
                         <span>PHP</span>
                         <span>JSON</span>
                     </div>
-                    <a href="projetos/helpdesk.php" class="link-projeto">
+                    <a href="../helpdesk.php" class="link-projeto">
                         Ver projeto ➡
                     </a>
                 </div>
