@@ -166,7 +166,7 @@
                 </div>
                 <div class="contato-item">
                     <h3>Github</h3>
-                    <p>github.com/PeruzzoCode</p>
+                    <p><a href="https://github.com/PeruzzoCode">github.com/PeruzzoCode</a></p>
                 </div>
                 <div class="contato-item">
                     <h3>Gmail</h3>
