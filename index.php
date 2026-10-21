@@ -13,5 +13,5 @@
 
     [$controller, $acao] = $rotas[$metodo][$rota];
 
-    $controller->$acao;
+    $controller->$acao();
 ?>
