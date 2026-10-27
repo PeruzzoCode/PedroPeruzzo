@@ -72,9 +72,11 @@
     $guerreiro->atacar();  //metodo herdado
     $guerreiro->defender();  //metodo proprio
 
-    
+    $personagens = [$guerreiro, $mago, $personagem];
 
-
+    foreach($personagens as $p) {
+        $p->atacar();
+    }
 
     //1. O que é uma classe?
     //Um molde para criar objetos
