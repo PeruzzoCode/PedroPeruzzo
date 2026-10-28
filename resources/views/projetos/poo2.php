@@ -104,14 +104,71 @@ function escapar($texto){
 }
 ?>
 
+
+
+<!-- HTML EM BAIXO E EM CIMA PHP -->
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTROLE DE PRODUÇÃO INDUSTRIAL</title>
 </head>
 <body>
-    
+
+    <div>
+        <h1>Controle de Produção Industrial</h1>
+        <h2>Cadastrar Máquina</h2>
+
+        <p><?php echo escapar($mensagem); ?></p>
+
+        <form method="POST">
+            <div>
+                <label>Nome da Máquina:</label>
+                <input type="text" name="nome" required>
+            </div>
+
+            <br>
+
+            <div>
+                <label>Tipo de Máquina:</label>
+                <select name="tipo" required>
+                    <option value="esteira">Esteira</option>
+                    <option value="prensa">Prensa</option>
+                    <option value="roboSoldagem">Robô de Soldagem</option>
+                </select>
+            </div>
+
+            <br>
+
+            <div>
+                <label>Quantidade Produzida:</label>
+                <input type="number" name="quantida" min="1" required>
+            </div>
+
+            <br>
+
+            <button type="submit">Cadastrar Máquina</button>
+        </form>
+    </div>
+
+    <hr>
+
+    <div>
+        <h2>Máquinas Cadastradas</h2>
+
+        <?php foreach ($_SESSION["maquinas"] as $maquina): ?>
+            <div>
+                <h3><?php echo escapar($maquina->nome); ?></h3>
+                <p>Operação: <?php echo escapar($maquina->operar()); ?></p>
+                <p>Produção: <?php echo escapar($maquina->getProducao()); ?></p>
+            </div>
+            <hr>
+        <?php endforeach; ?>
+    </div>
+
 </body>
 </html>
