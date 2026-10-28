@@ -71,8 +71,8 @@ class Curandeiro extends Personagem {
     }
 }
 
-$guerreiro = new Guerreiro("Felipe", 100, 30);
-$mago = new Mago("Pedro", 50, 15);
+$guerreiro = new Guerreiro("Pedro", 100, 30);
+$mago = new Mago("Felipe", 50, 15);
 $curandeiro = new Curandeiro("Sebastian", 50, 15);
 
 $personagens = [$guerreiro, $mago, $curandeiro];
