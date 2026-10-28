@@ -169,6 +169,21 @@
                     </a>
                 </div>
 
+                <div class="projeto-card">
+                    <div class="projeto-numero">06</div>
+                    <h3>Sistema para gerenciar cadastros de máquinas</h3>
+                    <p>SSistema em PHP que permite cadastrar máquinas industriais, registrar e vizualizar os dados dinamicamente, aplicando conceitos de Programação Orientada a objetos, como herança, abstração e polimorfismo.
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="projetos/poo2.php" class="link-projeto">
+                        Ver projeto ➡
+                    </a>
+                </div>
+
             </div>
         </section>
 
