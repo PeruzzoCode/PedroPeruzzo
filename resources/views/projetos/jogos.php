@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__. "/../conexao.php";
+require __DIR__ . "/../../../config/conexao.php";
 
 $sqlTabela = "
     CREATE TABLE IF NOT EXISTS jogos (
@@ -22,17 +22,23 @@ $mensagem = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
-    $nome = $_POST["nome"];
-    $genero = $_POST["genero"];
-    $nota = $_POST["nota"];
-    $ano_lancamento = $_POST["ano_lancamento"];
-    $usuario = $_POST["usuario"];
-    $senha = $_POST["senha"];
+    $nome = trim($_POST["nome"] ?? "");
+    $genero = trim($_POST["genero"] ?? "");
+    $nota = filter_var($_POST["nota"] ?? null, FILTER_VALIDATE_INT);
+    $anoInformado = trim($_POST["ano_lancamento"] ?? "");
+    $ano_lancamento = $anoInformado === "" ? null : filter_var($anoInformado, FILTER_VALIDATE_INT);
+    $usuario = $_POST["usuario"] ?? "";
+    $senha = $_POST["senha"] ?? "";
 
-    if ($usuario == "pedro" && $senha == "123"){
-        $sqlInsert = "INSERT INTO jogos (nome, genero, nota, ano_lancamento) VALUES ('$nome', '$genero', $nota, $ano_lancamento)";
-        
-        $pdo->exec($sqlInsert);
+    if ($usuario == "pedro" && $senha == "123" && $nome !== "" && $genero !== "" && $nota !== false && $ano_lancamento !== false){
+        $sqlInsert = "INSERT INTO jogos (nome, genero, nota, ano_lancamento) VALUES (:nome, :genero, :nota, :ano_lancamento)";
+        $stmt = $pdo->prepare($sqlInsert);
+        $stmt->execute([
+            ":nome" => $nome,
+            ":genero" => $genero,
+            ":nota" => $nota,
+            ":ano_lancamento" => $ano_lancamento
+        ]);
 
         $mensagem = "Jogo cadastrado com sucesso!<br><br>";
     }
@@ -101,8 +107,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php foreach($jogos as $jogo){?>
             <tr>
                 <td><?= $jogo ["id"] ?></td>
-                <td><?= $jogo ["nome"] ?></td>
-                <td><?= $jogo ["genero"] ?></td>
+                <td><?= htmlspecialchars($jogo["nome"], ENT_QUOTES, "UTF-8") ?></td>
+                <td><?= htmlspecialchars($jogo["genero"], ENT_QUOTES, "UTF-8") ?></td>
                 <td><?= $jogo ["nota"] ?></td>
                 <td><?= $jogo ["ano_lancamento"] ?></td>
             </tr>

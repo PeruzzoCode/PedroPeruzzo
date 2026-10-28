@@ -1,6 +1,13 @@
 <?php
 
-require_once "helpdesk-func.php";
+require_once __DIR__ . "/../../../app/Models/Chamado.php";
+
+$diretorioDados = __DIR__ . "/../../../storage/data";
+if (is_dir($diretorioDados)) {
+    chdir($diretorioDados);
+}
+
+$modelo = new Chamado();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $acao = $_POST["acao"] ?? "";
@@ -12,27 +19,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $descricao = $_POST["descricao"] ?? "";
         $prioridade = $_POST["prioridade"] ?? "";
 
-        cadastrarChamados($nome, $setor, $equipamento, $descricao, $prioridade);
+        $modelo->cadastrarChamados($nome, $setor, $equipamento, $descricao, $prioridade);
     } 
     else if ($acao == "atualizar") {
-        $posicao = $_POST["posicao"] ?? null;
+        $posicao = filter_var($_POST["posicao"] ?? null, FILTER_VALIDATE_INT);
         $novoStatus = $_POST["status"] ?? "";
 
-        if ($posicao !== null) {
-            atualizarStatusChamado($posicao, $novoStatus);
+        if ($posicao !== false) {
+            if (in_array($novoStatus, ["Aberto", "Em andamento", "Resolvido"], true)) {
+                $modelo->atualizarStatusChamado($posicao, $novoStatus);
+            }
         }
     }           
     else if ($acao == "excluir") {
-        $posicao = $_POST["posicao"] ?? null;
+        $posicao = filter_var($_POST["posicao"] ?? null, FILTER_VALIDATE_INT);
 
-        if ($posicao !== null) {
-            excluirChamado($posicao);
+        if ($posicao !== false) {
+            $modelo->excluirChamado($posicao);
         }
     }
 }
 
-$chamados = lerChamados();
-$relatorio = gerarRelatorio($chamados);
+$chamados = $modelo->lerChamados();
+$relatorio = $modelo->gerarRelatorio($chamados);
 
 ?>
 <!DOCTYPE html>
@@ -181,8 +190,8 @@ $relatorio = gerarRelatorio($chamados);
                             <tr>
                                 <td><strong>#<?php echo $posicao; ?></strong></td>
                                 <td><strong><?php echo htmlspecialchars($chamado['nome']); ?></strong></td>
-                                <td><?php echo ucfirst($chamado['setor']); ?></td>
-                                <td><?php echo ucfirst($chamado['equipamento']); ?></td>
+                                <td><?php echo htmlspecialchars(ucfirst($chamado['setor']), ENT_QUOTES, "UTF-8"); ?></td>
+                                <td><?php echo htmlspecialchars(ucfirst($chamado['equipamento']), ENT_QUOTES, "UTF-8"); ?></td>
                                 <td><?php echo nl2br(htmlspecialchars($chamado['descricao'])); ?></td>
                                 <td>
                                     <?php 
@@ -190,7 +199,7 @@ $relatorio = gerarRelatorio($chamados);
                                         if ($prioridadeClass == 'média' || $prioridadeClass == 'media') $prioridadeClass = 'media';
                                     ?>
                                     <span class="badge badge-prioridade-<?php echo $prioridadeClass; ?>">
-                                        <?php echo ucfirst($chamado['prioridade']); ?>
+                                        <?php echo htmlspecialchars(ucfirst($chamado['prioridade']), ENT_QUOTES, "UTF-8"); ?>
                                     </span>
                                 </td>
                                 <td>
