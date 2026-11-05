@@ -5,7 +5,7 @@ namespace App\Models;
 class Chamado{
 
 public function lerChamados() {
-    $arquivo = "chamados.json";
+    $arquivo = storage_path('app/Chamados.json');
 
     if (file_exists($arquivo)) {
         $conteudo = file_get_contents($arquivo);

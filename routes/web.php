@@ -8,9 +8,9 @@ Route::get('/', function () {
 });
 
 Route::get('/helpdesk', 
-[HelpdeskController::class, 'index'])->namespace
+[HelpdeskController::class, 'index'])->name
 ('helpdesk');
 
 Route::post('/helpdesk', 
-[HelpdeskController::class, 'salvar'])->namespace
+[HelpdeskController::class, 'salvar'])->name
 ('helpdesk.salvar');
