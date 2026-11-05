@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="resources/css/index.css">
+    @vite(['resources/css/index.css'])
     <title>Document</title>
 </head>
 <body>
@@ -99,7 +99,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="/resources/views/projetos/idade.php" class="link-projeto">
+                    <a href="{{ route('helpdesk') }}" class="link-projeto">
                         Ver projeto ➡
                     </a>
                 </div>
